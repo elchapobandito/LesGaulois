@@ -2,41 +2,39 @@ package personnages;
 
 public class Gaulois {
 
-	public static void main(String[] args) {
-		
-	}
-
 	private String nom;
+	private int force;
+	private int effetpotion = 1;
+
+	public Gaulois(String nom, int force) {
+		this.nom = nom;
+		this.force = force;
+	}
 
 	public String getNom() {
 		return nom;
 	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
+	
+	public void parler(String texte) {
+		System.out.println(prendreParole() + "<< " + texte + ">>");
 	}
-
-	public int getForce() {
-		return force;
+	
+	private String prendreParole() {
+		return "Le gaulois " + nom + " : ";
 	}
-
-	public void setForce(int force) {
-		this.force = force;
+	
+	public void frapper(Romain romain) {
+		System.out.println(nom + "envoie un grand coup dans la mâchoire de "
+			+ romain.getNom());
+		romain.recevoirCoup(force / 3);
 	}
-
-	public int getEffetPotion() {
-		return effetPotion;
-	}
-
-	public void setEffetPotion(int effetPotion) {
-		this.effetPotion = effetPotion;
-	}
-
-	private int force;
-	private int effetPotion = 1;
 
 	@Override
 	public String toString() {
-		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
+		return "Gaulois [nom=" + nom + ", force=" + force + ", effetpotion=" + effetpotion + "]";
+	}
+	
+	public static void main(String[] args) {
+		//TODO creer un main permettant de tester la classe Gaulois
 	}
 }
