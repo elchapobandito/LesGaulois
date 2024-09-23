@@ -30,12 +30,14 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3);
 	}
 
-	@Override
+	/*@Override
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetpotion=" + effetpotion + "]";
-	}
+	}*/
 	
 	public static void main(String[] args) {
+		new Gaulois("Astérix", 8);
+		System.out.println("Astérix");
 		//TODO creer un main permettant de tester la classe Gaulois
 	}
 }
