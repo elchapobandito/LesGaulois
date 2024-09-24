@@ -28,7 +28,7 @@ public class Village {
 		return villageois[numVillageois];
 	}
 
-	public void afficherVillageois(Village village) {
+	public void afficherVillageois() {
 		System.out.println("Dans le village du chef " + this.chef + " vivent les légendaires :");
 
 		for (int i = 0; i < this.nbVillageois; i++) {
@@ -54,7 +54,7 @@ public class Village {
 		
 		Gaulois obelix = new Gaulois("Obélix", 25);
 		village.ajouterHabitant(obelix);
-		afficherVillageois(village);
+		village.afficherVillageois();
 
 	}
 }

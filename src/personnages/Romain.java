@@ -4,9 +4,16 @@ public class Romain {
 	private String nom;
 	private int force;
 	
+	private int FORCE_MIN;
+	
 	public Romain(String nom, int force) {
 		this.nom = nom;
-		this.force = force;
+		if (this.force >= FORCE_MIN) {
+			this.force = force;
+		} else {
+			assert this.force >= FORCE_MIN;
+		}
+		
 	}
 
 	public String getNom() {
